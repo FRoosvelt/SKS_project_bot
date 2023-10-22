@@ -51,10 +51,8 @@ async def support_keyboard(messages, user_id=None):
 
         if messages == "one":
             text = "Написать сообщение в тех. поддержку"
-        elif messages == "many":
-            text = "✈️Написать администратору"
         else:
-            text = "✈️Write to the admin"
+            text = "✈️Написать администратору"
 
     keyboard = InlineKeyboardMarkup()
     keyboard.add(
