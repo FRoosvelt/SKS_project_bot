@@ -77,15 +77,6 @@ async def support_keyboard(messages, user_id=None):
                 )
             )
         )
-    elif messages == "many_eng":
-        keyboard.add(
-            InlineKeyboardButton(
-                text="❌ End session",
-                callback_data=cancel_support_callback.new(
-                    user_id=contact_id
-                )
-            )
-        )
     return keyboard
 
 
@@ -95,20 +86,6 @@ def cancel_support(user_id):
             [
                 InlineKeyboardButton(
                     text="❌ Завершить сеанс",
-                    callback_data=cancel_support_callback.new(
-                        user_id=user_id
-                    )
-                )
-            ]
-        ]
-    )
-
-def cancel_support_eng(user_id):
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [
-                InlineKeyboardButton(
-                    text="❌ End session",
                     callback_data=cancel_support_callback.new(
                         user_id=user_id
                     )
